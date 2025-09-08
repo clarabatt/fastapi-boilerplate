@@ -13,16 +13,17 @@ This is a Python backend boilerplate project using FastAPI, SQLAlchemy, Alembic,
     docker-compose up -d db
     ```
 
-4.  Install the dependencies using `uv`:
+4.  Create a virtual environment and activate it:
+
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate
+    ```
+
+5.  Install the dependencies using `uv`:
 
     ```bash
     uv pip install -r requirements.txt
-    ```
-
-5.  Activate your virtual environment if you haven't already.
-
-    ```bash
-    source .venv/bin/activate
     ```
 
 6.  Run the database migrations:
@@ -50,6 +51,14 @@ This is a Python backend boilerplate project using FastAPI, SQLAlchemy, Alembic,
     ```bash
     uvicorn app.main:app --reload
     ```
+
+### Down docker containers
+
+To stop and remove the docker containers, use the following command:
+
+```bash
+docker-compose down -v
+```
 
 ## Running tests
 
